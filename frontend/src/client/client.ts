@@ -37,9 +37,9 @@ class Client {
     }
   }
 
-  sendMessage(message: Message, username: string) {
+  sendMessage(message: Message) {
     if (this.socket && this.socket.connected) {
-      this.socket.emit('typing', { type: 'stop', username })
+      this.socket.emit('typing', { type: 'stop', username: message.username })
       this.socket.emit('messages', message)
     }
   }

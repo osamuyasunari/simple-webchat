@@ -44,8 +44,8 @@ function Chat(): any {
     if (text.trim().length === 0) return
     if (user && user.uuid) {
       const { uuid } = user
-      const message = { user: uuid, message: text }
-      clientService.sendMessage(message, user.username)
+      const message = { user: uuid, message: text, username: user.username }
+      clientService.sendMessage(message)
     }
   }
 

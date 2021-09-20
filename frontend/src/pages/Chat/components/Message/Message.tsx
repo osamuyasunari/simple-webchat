@@ -16,9 +16,18 @@ function Message(props: MessageProps): any {
   return (
     <div className={`${styles['message-wrapper']} ${self ? styles.self : ''}`}>
       <div className={`${styles.message} ${self ? styles['self-message'] : styles['not-self-message']} ${first ? styles['first-message'] : ''}`}>
+        {
+          self
+            ? ''
+            : (
+              <div className={`${styles.username} text-muted`}>
+                {message.username}
+              </div>
+            )
+        }
         <div className={styles.text}>
           <span>{message.message}</span>
-          <span className={styles.spacer} />
+          <div className={styles.spacer} />
         </div>
         <div className={`${styles.timestamp} text-muted`}>
           {formatTimestamp(message.timestamp)}

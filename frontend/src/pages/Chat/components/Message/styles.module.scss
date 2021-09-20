@@ -15,11 +15,15 @@
     background: white;
     border-radius: 10px;
     display: inline-block;
-    max-width: 40%;
+    max-width: 100%;
     position: relative;
   
     &.self-message {
       background: #DCF8C6;
+    }
+
+    &.not-self-message {
+      padding-top: 1.5rem!important;
     }
 
     &.not-self-message.first-message {
@@ -56,7 +60,7 @@
       overflow-x: hidden;
       span {
         white-space: pre-line;
-        word-break: break-all;
+        word-break: break-word;
       }
       .spacer {
         display: inline-block;
@@ -69,6 +73,12 @@
       font-size: 11px;
       bottom: 5px;
       right: 7px;
+    }
+
+    .username {
+      position: absolute;
+      top: .3rem;
+      font-size: 13px;
     }
   }
 }

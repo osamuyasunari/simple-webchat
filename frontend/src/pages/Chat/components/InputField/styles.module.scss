@@ -1,0 +1,56 @@
+.input-field {
+  background: #F0F0F0;
+  padding: 10px 1rem;
+  box-sizing: content-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root-input {
+  background: white;
+  border-color: transparent!important;
+}
+
+.notched-input {
+  border-color: transparent!important;
+}
+
+.focused-input {
+  border-color: black;
+  outline: none;
+}
+
+.textarea-wrapper {
+  width: 70%;
+  border-radius: 10px;
+  padding: .5rem;
+  background: white;
+
+  textarea {
+    outline: none;
+    border: 0;
+    width: 100%;
+    resize: none;
+    font: inherit;
+    overflow-y: auto;
+  }
+}
+
+.picker {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}

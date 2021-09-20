@@ -1,0 +1,44 @@
+.App {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.text-muted {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 800ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 800ms;
+}
+
+::-webkit-scrollbar {
+  width: 6px!important;
+  height: 6px!important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.2);
+}
+::-webkit-scrollbar-track {
+  background: hsla(0,0%,100%,.1);
+}

@@ -1,0 +1,39 @@
+.chat {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .toolbar-wrapper {
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex: 1;
+    height: calc(100% - 60px);
+    .left-pane {
+      display: flex;
+      flex-direction: column;
+      flex: 6;
+    }
+  
+    .right-pane {
+      border-left: 1px solid rgba(0, 0, 0, 0.08);
+      flex: 1;
+    }
+
+    .mobile-users {
+      display: none;
+      &.opened {
+        display: block;
+        position: absolute;
+        left: 0;
+        background: white;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

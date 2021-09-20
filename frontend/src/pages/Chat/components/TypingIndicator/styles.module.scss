@@ -1,0 +1,46 @@
+.message-wrapper {
+  padding-left: 9%;
+  padding-right: 9%;
+  display: flex;
+  position: relative;
+  justify-items: center;
+  margin-top: .5rem;
+
+  .message {
+    padding: .5rem;
+    background: white;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 40%;
+    position: relative;
+  
+    .text {
+      display: block;
+      overflow-x: hidden;
+      word-break: break-all;
+
+      .typing {
+        &::after {
+          animation: dots steps(1,end) 1s infinite;
+          content: '';
+        }
+        @keyframes dots {
+          0%   { content: ''; }
+          25%  { content: '.'; }
+          50%  { content: '..'; }
+          75%  { content: '...'; }
+          100% { content: ''; }
+        }
+      }
+
+      span {
+        white-space: pre-line;
+      }
+
+      .spacer {
+        display: inline-block;
+        width: 57px;
+      }
+    }
+  }
+}

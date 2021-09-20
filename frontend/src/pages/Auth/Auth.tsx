@@ -43,6 +43,14 @@ function Auth(): any {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    if (!username) {
+      setError('Псевдоним не может быть пустым')
+      return
+    }
+    if (username.length > 8) {
+      setError('Псевдоним не может быть больше 8 символов')
+      return
+    }
     auth(username)
   }
 
